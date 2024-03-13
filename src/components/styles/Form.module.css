@@ -1,0 +1,44 @@
+.form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-top: -30px;
+    height: 60px;
+    background-color: white;
+    width: 80%;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid var(--blue);
+    box-shadow: 0 5px 5px #ccc;
+    overflow: visible;
+}
+.location, .input{
+    border-right: 1px solid #ccc;
+}
+.form div{
+    display: flex;
+    align-items: center;
+    width: 33%;
+    height: 100%;
+    justify-content: space-between;
+}
+.form div input{
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    border: none;
+    padding: 7px 14px;
+    outline: none;
+}
+
+@media only screen and (max-width: 760px){
+    .location, .fulltime{
+        display: none !important;
+    }
+    .form div{
+        width: unset;
+    }
+}

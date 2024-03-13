@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+}
+.container{
+    max-width: 1280px;
+    width: 100vw;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,33 @@
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.header{
+    background: url("../../assets/desktop/bg-pattern-header.svg");
+    width: 100%;
+    background-size: cover;
+    background-position: bottom-left;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px 7vw;
+    height: 150px;
+    font-family: "Kumbh Sans", sans-serif;
+    color: #fff;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+}
+.right * {
+    margin: 0 7px;
+}
+.right img{
+    height: 20px;
+}
+.right i{
+    font-size: 30px;
+}
