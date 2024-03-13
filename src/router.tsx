@@ -11,7 +11,12 @@ const router = createBrowserRouter([
     {
         path: "/jobs",
         element: <Jobs />
-    }
+    },
+    {
+        path: "/dev-jobs",
+        element: <Home />,
+        errorElement: <Home />
+    },
 ]);
 
 export default router;
