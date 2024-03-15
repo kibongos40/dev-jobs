@@ -1,4 +1,5 @@
 import data from "../assets/data.json";
+import Job from "./Job";
 import styles from "./styles/Jobs.module.css"
 
 const Jobs:React.FC = ()=>{
@@ -9,27 +10,8 @@ const Jobs:React.FC = ()=>{
             {
                 jobs.map((job)=>{
                     return (
-                <div className={styles.job}>
-                    <div className={styles.inner}>
-                        <div className={styles.jobPicture}  style={{backgroundColor: job.logoBackground}}>
-                            <img src={""+job.logo} alt="" />
-                        </div>
-                        <div className={styles.details}>
-                            <div className={styles.info}>
-                                {job.postedAt} &#8226; {job.contract}
-                            </div>
-                            <div className={styles.position}>
-                                {job.position}
-                            </div>
-                            <div className={styles.company}>
-                                {job.company}
-                            </div>
-                            <div className={styles.location}>
-                                {job.location}
-                            </div>
-                        </div>
-                    </div>
-                </div>)
+                        <Job job={job} />
+                    )
                 })
             }
             </div>
