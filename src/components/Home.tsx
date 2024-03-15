@@ -6,7 +6,7 @@ import Button from "./Button";
 const Home:React.FC = ()=>{
     return (
         <div id="container" className={styles.container}>
-            <Nav />
+            <Nav showForm={true}/>
             <Jobs />
             <div style={{textAlign: "center"}}>
                 <Button text="Load More" />

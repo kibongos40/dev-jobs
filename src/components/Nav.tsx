@@ -4,25 +4,36 @@ import moon from "../assets/desktop/icon-moon.svg";
 import logo from "../assets/desktop/logo.svg";
 
 import Form from "./Form";
+import { Link } from "react-router-dom";
 
-const Nav:React.FC = ()=>{
+interface NavProps{
+    showForm?: boolean
+}
+
+const Nav:React.FC<NavProps> = (props)=>{
+    const {showForm} = props;
     return(
     <div className={styles.nav}>
         <div className={styles.header}>
-            <div className={styles.left}>
+            <Link to={"/"} className={styles.left}>
                 <img src={logo} alt="Logo" />
-            </div>
+            </Link>
             <div className={styles.right}>
                 <img src={sun} alt="" />
                 <i className="fa fa-toggle-on"></i>
                 <img src={moon} alt="" />
             </div>
         </div>
-        <div style={{overflow: "visible"}}>
-            <Form />
+        <div>
+            {
+                showForm ? <Form /> : " "
+            }
         </div>
     </div>
     );
+    Nav.defaultProps = {
+        showForm: false
+    }
 }
 
 export default Nav;

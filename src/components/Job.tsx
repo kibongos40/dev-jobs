@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import styles from "./styles/Job.module.css"
 
 interface JobProps{
@@ -9,14 +10,15 @@ interface JobProps{
         position: string,
         company: string,
         location: string,
-        logoBackground: string
+        logoBackground: string,
+        id: number
     }
 }
 
 const Job:React.FC<JobProps> = (props)=>{
     const {job} = props;
     return(
-        <div className={styles.job}>
+        <Link to={"/"+job.id} className={styles.job}>
             <div className={styles.inner}>
                 <div className={styles.jobPicture}  style={{backgroundColor: job.logoBackground}}>
                     <img src={""+job.logo} alt="" />
@@ -36,7 +38,7 @@ const Job:React.FC<JobProps> = (props)=>{
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
 

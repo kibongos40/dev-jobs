@@ -10,7 +10,7 @@ const Jobs:React.FC = ()=>{
             {
                 jobs.map((job)=>{
                     return (
-                        <Job job={job} />
+                        <Job key={job.id} job={job} />
                     )
                 })
             }

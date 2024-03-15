@@ -7,4 +7,9 @@
     font-size: 1rem;
     font-weight: 700;
     margin: 0 5px;
+    text-decoration: none;
+}
+.button:hover{
+    background: #949bf5;
+    color: #fff;
 }
