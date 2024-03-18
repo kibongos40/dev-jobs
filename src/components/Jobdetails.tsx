@@ -35,7 +35,7 @@ const Jobdetails:React.FC = ()=>{
     const found = data.filter((job) => { return job.id == jobid});
     return (
         <div style={{overflow: "visible", zIndex: 20}}>
-            <Nav showForm={false} />
+            <Nav />
             <div style={{overflow: "visible"}}>
                 {
                     found.length == 1 ? <Details job={found[0]} /> : <Jobs />

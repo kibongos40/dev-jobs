@@ -20,9 +20,6 @@ const Nav:React.FC = ()=>{
         </div>
     </div>
     );
-    Nav.defaultProps = {
-        showForm: false
-    }
 }
 
 export default Nav;
