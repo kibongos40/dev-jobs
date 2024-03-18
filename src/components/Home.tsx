@@ -4,6 +4,7 @@ import styles from "./styles/Home.module.css"
 import Button from "./Button";
 
 const Home:React.FC = ()=>{
+    document.title = "Home - Devjobs";
     return (
         <div id="container" className={styles.container}>
             <Nav/>

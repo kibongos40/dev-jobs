@@ -33,6 +33,11 @@ const Jobdetails:React.FC = ()=>{
     const jobid = Number(params.jobid);
     console.log(jobid);
     const found = data.filter((job) => { return job.id == jobid});
+    if(found.length > 0){
+        const job = found[0];
+        const title = job.position + " at " + job.company + " - DevJobs" ;
+        document.title = title;
+    }
     return (
         <div style={{overflow: "visible", zIndex: 20}}>
             <Nav />
