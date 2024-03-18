@@ -3,15 +3,9 @@ import sun from "../assets/desktop/icon-sun.svg";
 import moon from "../assets/desktop/icon-moon.svg";
 import logo from "../assets/desktop/logo.svg";
 
-import Form from "./Form";
 import { Link } from "react-router-dom";
 
-interface NavProps{
-    showForm?: boolean
-}
-
-const Nav:React.FC<NavProps> = (props)=>{
-    const {showForm} = props;
+const Nav:React.FC = ()=>{
     return(
     <div className={styles.nav}>
         <div className={styles.header}>
@@ -23,11 +17,6 @@ const Nav:React.FC<NavProps> = (props)=>{
                 <i className="fa fa-toggle-on"></i>
                 <img src={moon} alt="" />
             </div>
-        </div>
-        <div>
-            {
-                showForm ? <Form /> : " "
-            }
         </div>
     </div>
     );
