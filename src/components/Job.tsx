@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import styles from "./styles/Job.module.css"
+import {isDark} from "./Nav";
 
 interface JobProps{
     job: {
@@ -19,7 +20,7 @@ const Job:React.FC<JobProps> = (props)=>{
     const {job} = props;
     return(
         <Link to={"/"+job.id} className={styles.job}>
-            <div className={styles.inner}>
+            <div className={`${styles.inner} ${isDark ? styles.dark : ''}`}>
                 <div className={styles.jobPicture}  style={{backgroundColor: job.logoBackground}}>
                     <img src={""+job.logo} alt="" />
                 </div>

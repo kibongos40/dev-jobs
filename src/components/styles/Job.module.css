@@ -42,7 +42,6 @@
 .job .inner .details{
     color: #758294;
 }
-
 .job .inner .details .position{
     color: #111;
     font-weight: bold;
@@ -51,4 +50,12 @@
 .job .inner .details .location{
     color: var(--blue);
     font-weight: bold;
+}
+
+.job .dark{
+    background: var(--dark);
+    box-shadow: unset;
+}
+.job .dark .position{
+    color: #fff !important;
 }

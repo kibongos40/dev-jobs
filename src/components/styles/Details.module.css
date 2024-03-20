@@ -48,6 +48,13 @@
     padding: 10px 2vw;
     background-color: #fff;
 }
+.dark{
+    background-color: var(--dark) !important;
+    color: #fff;
+}
+.dark p, .dark ul, .dark ol{
+    color: #8693a4 !important;
+}
 
 @media only screen and (max-width: 670px){
     .header{

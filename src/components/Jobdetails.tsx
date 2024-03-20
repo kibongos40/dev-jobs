@@ -5,6 +5,7 @@ import Jobs from "./Jobs";
 import Details from "./Details";
 import styles from "./styles/Jobdetails.module.css"
 import buttonStyle from "./styles/Button.module.css"
+import {isDark} from "./Nav";
 
 interface FooterProps{
     position: string,
@@ -15,7 +16,7 @@ interface FooterProps{
 const Footer:React.FC<FooterProps> = (props)=>{
     const {position, company, apply} = props;
     return(
-        <div className={styles.footer}>
+        <div className={`${styles.footer} ${isDark ? styles.dark:''}`}>
             <div className={styles.inner}>
                 <div>
                     <h3>{position}</h3>
@@ -46,7 +47,7 @@ const Jobdetails:React.FC = ()=>{
                     found.length == 1 ? <Details job={found[0]} /> : <Jobs />
                 }
             </div>
-            <div className={styles.footer}>
+            <div className={` ${styles.footer} ${isDark ? styles.dark:''}`}>
                 {
                     found.length == 1 ? <Footer apply={found[0].apply} company={found[0].company} position={found[0].position}  /> : ""
                 }

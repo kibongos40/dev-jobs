@@ -1,3 +1,4 @@
+import {isDark} from "./Nav";
 import button from "./styles/Button.module.css"
 import styles from "./styles/Details.module.css"
 
@@ -28,12 +29,12 @@ interface DetailsProps{
 const Details:React.FC<DetailsProps> = (props)=>{
     const {job} = props;
     return(
-<div className={styles.details}>
-                    <div className={styles.header} style={{overflow: "visible"}}>
+<div className={` ${styles.details}`}>
+                    <div className={`${styles.header} ${isDark ? styles.dark:''}`} style={{overflow: "visible"}}>
                         <div className={styles.logo} style={{backgroundColor: job.logoBackground}}>
                             <img src={job.logo} alt="Company logo" />
                         </div>
-                        <div className={styles.company}>
+                        <div className={`${styles.company}  ${isDark ? styles.dark:''}`}>
                             <div>
                                 <h2>{job.company}</h2>
                                 <p>{job.company}.com</p>
@@ -43,7 +44,7 @@ const Details:React.FC<DetailsProps> = (props)=>{
                             </div>
                         </div>
                     </div>
-                    <div className={styles.content}>
+                    <div className={`${styles.content} ${isDark ? styles.dark:''}`}>
                         <p className={styles.gray}>
                             {job.postedAt} &#8226; {job.contract}
                         </p>

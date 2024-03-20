@@ -15,8 +15,9 @@
     box-shadow: 0 5px 5px #ccc;
     overflow: visible;
 }
+
 .location, .input{
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #555;
 }
 .form div{
     display: flex;
@@ -32,6 +33,13 @@
     border: none;
     padding: 7px 14px;
     outline: none;
+}
+
+.dark, .dark input{
+    background: var(--dark);
+    box-shadow: unset;
+    border: unset;
+    color: #fff;
 }
 
 @media only screen and (max-width: 760px){

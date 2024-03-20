@@ -3,6 +3,7 @@ import locationIcon from "../assets/desktop/icon-location.svg";
 import styles from "./styles/Form.module.css"
 import Button from "./Button";
 import { useState } from "react";
+import {isDark} from "./Nav";
 
 
 interface Props{
@@ -26,7 +27,7 @@ const Form: React.FC<Props> = (props) => {
     }
     const [check, setCheck] = useState(false);
     return (
-        <form className={styles.form}>
+        <form className={`${styles.form} ${isDark ? styles.dark:''}`}>
             <div className={styles.input}>
                 <img src={seachIcon} alt="Search Icon" />
                 <input onChange={filterChange} type="text" placeholder="Filter by title, companies, expertise..."/>
