@@ -3,7 +3,7 @@ import sun from "../assets/desktop/icon-sun.svg";
 import moon from "../assets/desktop/icon-moon.svg";
 import logo from "../assets/desktop/logo.svg";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export let isDark = false;
 
@@ -19,19 +19,6 @@ const Nav: React.FC = () => {
         setTheme(newTheme);
         window.location.reload();
     };
-
-    useEffect(() => {
-        const handleStorageChange = () => {
-            const storedTheme = localStorage.getItem('theme');
-            if (storedTheme === 'dark' || storedTheme === 'light') {
-                setTheme(storedTheme === 'dark');
-            }
-        };
-        window.addEventListener('storage', handleStorageChange);
-        return () => {
-            window.removeEventListener('storage', handleStorageChange);
-        };
-    }, []);
     isDark = theme;
     if(isDark){
         const body = document.querySelector("body");
