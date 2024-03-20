@@ -28,6 +28,9 @@
 .right img{
     height: 20px;
 }
-.right i{
+.right *{
     font-size: 30px;
+}
+a:active{
+    opacity: 0;
 }

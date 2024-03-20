@@ -31,9 +31,9 @@ const Nav: React.FC = () => {
                     <img src={logo} alt="Logo" />
                 </Link>
                 <div className={styles.right}>
-                    <img src={theme ? sun : moon} alt="" />
-                    <i className="fa fa-toggle-on" onClick={handleChangeTheme}></i>
-                    <img src={theme ? moon : sun} alt="" />
+                    <img src={sun} alt="" />
+                    <a className={`${styles.fa} fa ${theme ? 'fa-toggle-off' : 'fa-toggle-on'}`} onClick={handleChangeTheme}></a>
+                    <img src={moon} alt="" />
                 </div>
             </div>
         </div>
