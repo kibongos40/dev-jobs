@@ -24,6 +24,10 @@ const Nav: React.FC = () => {
         const body = document.querySelector("body");
         body!.style.background = "#131722";
     }
+    else{
+        const body = document.querySelector("body");
+        body!.style.background = "#f5f6f8";
+    }
     return (
         <div className={styles.nav}>
             <div className={styles.header}>
